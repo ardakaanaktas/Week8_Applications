@@ -44,6 +44,52 @@ namespace EmtyCore
 
             //Uygulamanýn çalýþtýrýlmasý için Run metodu çaðrýlýr.
             app.Run();
+
+            /*
+             
+            Controller:
+            Kullanýcý isteklerini alýr ve iþler.
+            Model nesnelerini oluþturur veya günceller.
+            View'a hangi verilerin gönderileceðine karar verir.
+            Uygun View'a yönlendirme yapar.
+
+            Action:
+            Controller içindeki bir metottur.
+            Bir kullanýcý isteðine karþýlýk gelen iþlemleri gerçekleþtirir.
+            Genellikle HTTP metodlarýna (GET, POST, PUT, DELETE) karþýlýk gelir.
+
+            Model:
+            Uygulama verilerini temsil eder.
+            Veritabaný tablolarýna veya diðer veri kaynaklarýna karþýlýk gelebilir.
+            View'a baðlanarak kullanýcý arayüzünde görüntülenir.
+
+            View:
+            Kullanýcý arayüzünü oluþturur.
+            Model'deki verileri kullanarak dinamik içerik üretir.
+            Razor syntax ile yazýlýr.
+
+            Razor:
+            View'larý oluþturmak için kullanýlan bir templating dilidir.
+            C# kodunu HTML ile karýþtýrmaya olanak saðlar.
+            RazorView:
+            Razor syntax ile yazýlmýþ bir View dosyasýdýr.
+
+            wwwroot:
+            Statik dosyalarýn (CSS, JavaScript, resimler) saklandýðý klasördür.
+            Bu dosyalar doðrudan tarayýcýya servis edilir.
+
+            builder.Build() ve app.Run() Metotlarý
+
+            builder.Build():
+            Uygulama yapýlandýrmasýný tamamlayarak bir IHostBuilder nesnesi oluþturur.
+            Bu nesne, uygulamaya hizmetler eklemek, ortamlarý yapýlandýrmak gibi iþlemler için kullanýlýr.
+
+            app.Run():
+            Oluþturulan IHostBuilder nesnesini kullanarak web sunucusunu baþlatýr ve istekleri iþlemeye baþlar.
+            Uygulama yaþam döngüsünün baþlangýcýdýr.
+             
+             
+             */
         }
     }
 }
