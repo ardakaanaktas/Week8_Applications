@@ -1,0 +1,30 @@
+﻿@{
+    
+    string name = "Arda";
+    string lastName = "Aktaş";
+    string fullName = name +" "+lastName;
+}
+
+@model List<Hobi>
+
+@{
+    ViewData["Title"] = "Hobiler";
+}
+<h1>Yasam</h1>
+
+<h2>Hobilerim (@Model.Count)</h2>
+<ul>
+        @foreach (var hobi in Model)
+    {
+        <li>@hobi.Ad  @hobi.Aciklama  @hobi.Degree </li>
+        
+    }
+</ul>
+
+<p class ="muted">@ViewBag.sample_text</p>
+
+<p>@fullName</p>
+@*
+    <p class ="muted">@ViewData["sample_text"]</p>
+    
+*@

@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+   ViewData["Title"] = "Customer Module";
+}
+
+<h2 class="text-center mb-3">List Of Customers</h2>
+
+<a asp-controller="Customers" asp-action="Create" class="btn btn-primary mb-3">Create Customer</a>
+
+<table class="table">
+
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Company</th>
+        <th>Created At</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    @foreach (var customer in Model.customersList)
+    {
+        <tr>
+            <td>@customer.Id</td>
+            <td>@customer.Name</td>
+            <td>@customer.Email</td>
+            <td>@customer.Phone</td>
+            <td>@customer.Company</td>
+            <td>@customer.CreatedAt</td>
+            <td>
+                <a asp-controller="Customers" asp-action="Edit" asp-route-id="@customer.Id" class="btn btn-primary">Edit</a>
+                <a asp-controller="Customers" asp-action="Delete" asp-route-id="@customer.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</tbody>
+</table>
+
+
