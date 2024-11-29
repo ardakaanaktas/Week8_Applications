@@ -1,0 +1,50 @@
+﻿@model BasicMVC.Models.CustomerOrderViewModel
+
+@{
+    ViewData["Title"] = "Customer Orders";
+}
+
+<h2>Customer Orders</h2>
+
+<div class="row">
+    <h3>Orders Details</h3>
+    <div class="col-md-8">
+        <table class="table">
+    <thead>
+        <tr>
+            <th>
+               <strong>ID</strong>
+            </th>
+            <th>
+                <strong>Product Name</strong>
+            </th>
+            <th>
+                <strong>Price</strong>
+            </th>
+            <th>
+                <strong>Quantity</strong>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach(var item in Model.orders){
+           <tr>
+               <td>@item.Id</td>
+               <td>@item.ProductName</td>
+               <td>@item.Price</td>
+               <td>@item.Quantity</td>
+           </tr>
+       }
+    </tbody>
+</table>
+    </div>
+    <div class="col-md-4">
+        <h3>Customer Details</h3>
+        <div>
+            <strong>Customer Name:</strong> @Model.customer.FirstName <br />
+            <strong>Customer Last Name:</strong> @Model.customer.LastName <br />
+            <strong>Customer E-mail: </strong>@Model.customer.Email <br />
+    </div>
+
+
+
